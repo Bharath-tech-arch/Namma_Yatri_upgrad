@@ -3355,6 +3355,260 @@ select * from trips_details;
 select sum(searches_got_estimates)*100/sum(searches) from trip_details
 
 
+Methodology Report:
+Visualisation & Analysis on Namma Yatri Data
+________________________________________
+Include your visualisations, analysis, results, insights, and outcomes. 
+Explain your methodology and approach to the tasks. Add your conclusions to the sections.
+Table 1: Data Description
+
+Table Name	Column Name	Description
+Assembly	Assembly_ID	Unique identifier
+	Assembly	Specific assembly zone name
+Duration	duration_id	Unique identifier of time periods
+	duration	Hour of trip (e.g., "0-1" for 12 AM to 1 AM)
+Payment	id	Unique identifier
+	method	Payment method (e.g., Cash, UPI, Credit Card)
+
+
+
+
+
+
+Trip Details	tripid	Unique identifier of trips
+	loc_from	Source Location code
+	searches	Trip request count
+	searches_got_estimate	Got an estimated price (1 = user gets an estimate, 0 = does not get an estimate)
+	searches_for_quotes	Searched for drivers after estimate (1 - searched, 0 - not searched)
+	searches_got_quotes	Got quotes (1 = Driver allotted, 0 = not allotted)
+	customer_not_cancelled	Whether customer cancelled or not (1 = Not cancelled)
+	driver_not_cancelled	Whether driver cancelled or not (1 = Not cancelled)
+	otp_entered	(1 = OTP entered, 0 = not entered)
+	end_ride	Whether ride was completed (1 = Completed)
+
+
+
+
+Trips	tripid	Links to Trip Details
+	faremethod	Payment method ID, links to Payment table
+	fare	Fare amount
+	loc_from	Location ID of source
+	loc_to	Location ID of destination, links to Assembly table
+	driverid	Driver ID
+	custid	Customer ID
+	distance	Distance in KM from source to destination
+	duration	Unique identifier of time periods like duration_id
+ 
+Points to Note:
+1.	Without this methodology document, the other parts of your case study will not be evaluated.
+2.	This assignment is different from the ones you have solved before. 
+Make sure that you treat this case study as a storytelling exercise and not an analysis/visualisation one. This will help you be better prepared for the presentations.
+3.	Once you are done with the analysis and visualisations, there will be many insights at your hand. 
+Make sure that you map the right visuals and takeaways with the right audience since some of these insights might be relevant to one group but not to the other group.
+4.	DO NOT change the text or numbering of any task, as it may cause problems with grading. Write your solutions to a task in the space provided below the respective task.
+Tasks to be performed
+●	Present the overall approach of the analysis. 
+●	Mention the problem statement and the analysis approach briefly.
+●	To solve a task, you have to create relevant visualisations and derive appropriate insights from the visualisations. 
+●	Add all the plots, insights, calculated field commands, results and outcomes for a task with proper numbering and sequence in the report.
+●	The scores for all tasks (except conclusions) comprise both analysis work in the visualisation tool and its outcome in the report. 
+●	You will be awarded a score for a task only if the Tableau/PowerBI analysis is correct and is included in the report along with the subsequent insights.
+●	Finally, draw conclusions based on the analysis.
+
+Scoring:
+Report Total Marks: 70
+Sections: 3 sections (10 marks + 40 marks + 20 marks) 
+Analysis and Visualisation
+1. Data Preparation							[10 Marks]
+1.1.	 Import and Join Tables Correctly [5 Mark]
+●	Import the Namma Yatri dataset into Tableau/Power BI.
+●	Ensure that you correctly join all tables to create a unified dataset for analysis.
+●	Verify the relationships between different tables and confirm that data from various sources is properly aligned for accurate insights.
+Solution:
+________________________________________
+<your answer here, include all analysis, graphs, results etc> (the length of the solution is not fixed, ie, this box can vary in size) 
+
+
+
+
+________________________________________
+1.2.	 Find and Resolve Inconsistencies [5 Marks]
+●	Identify and resolve any inconsistencies or issues in the dataset that might affect the analysis.
+●	Clean the data to ensure it is structured properly for analysis, removing any irrelevant, duplicate, or erroneous entries.
+●	While performing the analysis, create calculated fields as needed to ensure the accuracy and relevance of the insights.
+Solution:
+________________________________________
+
+
+
+
+
+________________________________________ 
+2. Exploratory Data Analysis					[40 Marks]
+2.1.	 Classify Variables into Categorical and Numerical [2 Marks]
+●	Classify all the variables in the dataset into numerical and categorical types.
+Solution:
+________________________________________
+
+
+
+________________________________________
+
+2.2.	 Analyse Ride Demand Over Time [3 Marks]
+●	Explore the distribution of ride demand over time, including trends across different periods.
+●	Identify the peak demand periods. Choose an appropriate parameter for demand based on your own understanding.
+Solution:
+________________________________________
+
+
+
+________________________________________
+
+2.3.	 Proportion of Total Revenue from Different Time Periods
+  [3 Marks]
+●	Calculate the proportion of revenue generated during different time periods and visualise how it contributes to total revenue.
+Solution:
+________________________________________
+
+
+
+
+________________________________________
+
+2.4.	 Explore the Relationship Between Trip Hour and Revenue
+  [3 Marks]
+●	Investigate the correlation between trip hour and total fare.
+●	Explain any trends or patterns that emerge.
+Solution:
+________________________________________
+
+
+
+________________________________________
+
+2.5.	 Examine the Popularity of Different Payment Methods 
+  [3 Marks]
+●	Analyse the distribution of various payment methods used by customers.
+●	Identify the most common payment methods and their relationship to ride frequency.
+Solution:
+________________________________________
+
+
+
+________________________________________
+
+2.6.	 Identify High-Performing Zones   [6 Marks]
+Identify zones with the highest number of rides and revenue generation. Analyse factors contributing to their performance:
+●	2.6.1. Rides: Identify pickup zones with the highest number of trip requests.
+[3 marks]
+Solution:
+________________________________________
+
+
+
+________________________________________
+●	2.6.2. Revenue: Identify pickup zones generating the highest revenue.
+[3 marks]
+Solution:
+________________________________________
+
+
+
+
+________________________________________
+
+2.7.	 Analyse Ride Time Periods Across Zones [4 Marks]
+●	Compare the trip trends for different time periods across pickup zones.
+Solution:
+________________________________________
+
+
+
+
+
+________________________________________
+
+2.8.	 Top Zones with Highest Trip Volume [3 Marks]
+●	Identify the top 5 pickup zones with the highest total number of completed trips.
+●	Analyse factors contributing to the higher number of trips.
+Solution:
+________________________________________
+
+
+
+
+________________________________________
+
+2.9.	 Basic Analytical Tasks [8 Marks]
+●	2.9.1 
+What are the percentages of cancellations and successful rides by both driver and customer? [3 marks]
+Solution:
+________________________________________
+
+
+
+
+________________________________________
+
+●	2.9.2
+Analyse the percentage of people who completed trips after searching for quotes. Visualise the variation of this ratio by time periods.
+[5 marks]
+Solution:
+________________________________________
+
+
+
+________________________________________
+
+2.10.	Create a Parameter and Use Filters [5 Marks]
+●	Create a parameter and use it as a filter on an appropriate subset of the data to interactively analyse and visualise different subsets of the data.
+●	Explain your choice of filter and insights drawn from this step.
+Solution:
+________________________________________
+
+
+
+
+________________________________________
+
+
+
+3. Conclusion 							[20 Marks]
+3.1.	 Recommendations for Operational Efficiency    [10 Marks]
+●	Based on your findings from the analysis, provide recommendations on how Namma Yatri can optimise its operations.
+●	This could include strategies for improving resource allocation, reducing cancellations, or optimising ride durations.
+●	Add supporting dashboards.
+Solution:
+________________________________________
+
+
+
+
+
+________________________________________
+
+3.2.	 Marketing and Operational Strategy Improvements    [10 Marks]
+●	Suggest improvements to Namma Yatri’s marketing or operational strategies based on your analysis.
+●	Recommendations could involve promotional efforts, driver incentives, or regional targeting to increase customer satisfaction and service efficiency.
+●	Add supporting dashboards.
+Solution:
+________________________________________
+
+									
+									
+	0	FALSE							
+	1	TRUE							
+			Searches	Fare Estimate	Search For Quotes	search got quotes	Trip Cncelled By Driver	otp_entered	end_ride
+			2161	1758	1455	1277	1021	983	983
+				81%	83%	88%	80%	96%	100%
+
+
+
+
+________________________________________
+
+
+
 
 
 
